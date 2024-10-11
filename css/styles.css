@@ -78,6 +78,20 @@ body {
 .button:focus {
   background-color: #404bbf;
 }
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.section-subtitle {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
 /* ============= /COMMON STYLES ============= */
 
 /* ============= HEADER STYLES ============= */
@@ -183,6 +197,29 @@ body {
 }
 
 /* ============= /HERO STYLES ============= */
+
+/* ============= BENEFITS STYLES ============= */
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+}
+
+.benefits-item-icon-wrapper {
+    display: none;
+}
+
+.benefits-subtitle {
+    text-align: center;
+}
+
+.benefits-text {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+/* ============= /BENEFITS STYLES ============= */
 
 /* ============= MENU STYLES ============= */
 .menu {
@@ -462,14 +499,38 @@ body {
     line-height: 1.07;
   }
   /* ============= /HERO STYLES ============= */
+
+  /* ============= BENEFITS STYLES ============= */
+.benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+}
+
+.benefits-item {
+    width: calc((100% - 24px) / 2);
+}
+
+.benefits-subtitle {
+    text-align: left;
+}
+/* ============= /BENEFITS STYLES ============= */
 }
 /* ============= /TABLET STYLES ============= */
 
-/* ============= DESCTOP STYLES ============= */
+/* ============= DESKTOP STYLES ============= */
 @media screen and (min-width: 1158px) {
   /* ============= COMMON STYLES ============= */
   .container {
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
   }
   /* ============= /COMMON STYLES ============= */
 
@@ -519,5 +580,29 @@ body {
     margin-bottom: 48px;
   }
   /* ============= /HERO STYLES ============= */
+
+    /* ============= BENEFITS STYLES ============= */
+.benefits-item {
+    width: calc((100% - 72px) / 4);
 }
-/* ============= /DESCTOP STYLES ============= */
+
+.benefits-item-icon-wrapper {
+    width: 100%;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    background-color: #f4f4fd;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits-text {
+    font-weight: 400;
+}
+/* ============= /BENEFITS STYLES ============= */
+}
+/* ============= /DESKTOP STYLES ============= */
