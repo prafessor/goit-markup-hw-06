@@ -80,18 +80,31 @@ body {
 }
 
 .section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-title {
+  margin-bottom: 72px;
+
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
 }
 
 .section-subtitle {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-  }
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
 /* ============= /COMMON STYLES ============= */
 
 /* ============= HEADER STYLES ============= */
@@ -200,26 +213,107 @@ body {
 
 /* ============= BENEFITS STYLES ============= */
 .benefits-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 72px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 72px;
 }
 
 .benefits-item-icon-wrapper {
-    display: none;
+  display: none;
 }
 
 .benefits-subtitle {
-    text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  text-align: center;
 }
 
 .benefits-text {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 /* ============= /BENEFITS STYLES ============= */
+
+/* ============= TEAM STYLES ============= */
+.page-team {
+  background-color: #f4f4fd;
+}
+
+.team-list {
+  max-width: 264px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 72px;
+}
+
+.team-item {
+  width: 100%;
+
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-description {
+  padding: 32px 0;
+}
+
+.team-subtitle {
+  text-align: center;
+}
+
+.team-text {
+  margin-bottom: 8px;
+
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #434455;
+}
+
+.team-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-media-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-media-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-color: #4d5ae5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-media-link:hover,
+.team-media-link:focus {
+  background-color: #404bbf;
+}
+
+.team-media-icon {
+  fill: #f4f4fd;
+}
+/* ============= /TEAM STYLES ============= */
 
 /* ============= MENU STYLES ============= */
 .menu {
@@ -470,17 +564,17 @@ body {
   /* ============= /HEADER STYLES ============= */
 
   /* ============= HERO STYLES ============= */
-.page-hero {
+  .page-hero {
     max-width: 768px;
     padding: 112px 0;
-  
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/tablet/bg-tablet.jpg);
   }
-  
+
   @media screen and (min-resolution: 192dpi) {
     .page-hero {
       background-image: linear-gradient(
@@ -490,31 +584,46 @@ body {
         url(../images/tablet/bg-tablet@2x.jpg);
     }
   }
-  
+
   .hero-title {
     max-width: 496px;
     margin-bottom: 36px;
-  
+
     font-size: 56px;
     line-height: 1.07;
   }
   /* ============= /HERO STYLES ============= */
 
   /* ============= BENEFITS STYLES ============= */
-.benefits-list {
+  .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
-}
+  }
 
-.benefits-item {
+  .benefits-item {
     width: calc((100% - 24px) / 2);
-}
+  }
 
-.benefits-subtitle {
+  .benefits-subtitle {
     text-align: left;
-}
-/* ============= /BENEFITS STYLES ============= */
+  }
+  /* ============= /BENEFITS STYLES ============= */
+
+  /* ============= TEAM STYLES ============= */
+  .team-list {
+    max-width: 552px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-item {
+    width: calc((100% - 24px) / 2);
+  }
+  /* ============= /TEAM STYLES ============= */
 }
 /* ============= /TABLET STYLES ============= */
 
@@ -527,10 +636,9 @@ body {
     padding-right: 15px;
   }
 
-  .section-subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   /* ============= /COMMON STYLES ============= */
 
@@ -554,18 +662,18 @@ body {
   }
   /* ============= /HEADER STYLES ============= */
 
-    /* ============= HERO STYLES ============= */
-.page-hero {
+  /* ============= HERO STYLES ============= */
+  .page-hero {
     max-width: 1440px;
     padding: 188px 0;
-  
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/desktop/bg-desktop.jpg);
   }
-  
+
   @media screen and (min-resolution: 192dpi) {
     .page-hero {
       background-image: linear-gradient(
@@ -575,18 +683,18 @@ body {
         url(../images/desktop/bg-desktop@2x.jpg);
     }
   }
-  
+
   .hero-title {
     margin-bottom: 48px;
   }
   /* ============= /HERO STYLES ============= */
 
-    /* ============= BENEFITS STYLES ============= */
-.benefits-item {
+  /* ============= BENEFITS STYLES ============= */
+  .benefits-item {
     width: calc((100% - 72px) / 4);
-}
+  }
 
-.benefits-item-icon-wrapper {
+  .benefits-item-icon-wrapper {
     width: 100%;
     height: 112px;
     border: 1px solid #8e8f99;
@@ -598,11 +706,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.benefits-text {
+  .benefits-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .benefits-text {
     font-weight: 400;
-}
-/* ============= /BENEFITS STYLES ============= */
+  }
+  /* ============= /BENEFITS STYLES ============= */
+
+  /* ============= TEAM STYLES ============= */
+  .team-list {
+    max-width: 1128px;
+  }
+
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ============= /TEAM STYLES ============= */
 }
 /* ============= /DESKTOP STYLES ============= */
